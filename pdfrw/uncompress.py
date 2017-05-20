@@ -90,7 +90,6 @@ def flate_png(data, parms):
     columns = int(parms.Columns)
     data = array.array('B', data)
     rowlen = columns + 1
-    assert len(data) % rowlen == 0
     rows = xrange(0, len(data), rowlen)
     for row_index in rows:
         offset = data[row_index]
